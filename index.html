@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>🏀Basketball Score Keeper🏀</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<script>
+    let scoreA=0
+    let scoreB=0;
+    function incScoreA()
+    {
+        scoreA++;
+        document.getElementById("scoreA").innerHTML=scoreA;
+    }
+    function decScoreA()
+    {
+        scoreA--;
+        document.getElementById("scoreA").innerHTML=scoreA;
+    }
+    function incScoreB()
+    {
+        scoreB++;
+        document.getElementById("scoreB").innerHTML=scoreB;
+    }
+    function decScoreB()
+    {
+        scoreB--;
+        document.getElementById("scoreB").innerHTML=scoreB;
+    }
+    function reset()
+    {
+        scoreA=0;
+        scoreB=0;
+        document.getElementById("scoreA").innerHTML=scoreA;
+        document.getElementById("scoreB").innerHTML=scoreB;
+    }
+</script>
+<body>
+    <div class="app-title-container">
+        <h1 class="app-title">Basketball Score Keeper🏀</h1>
+    </div>
+    <div class="team-card-container">
+            <div class="team-card"> 
+                <h2 class="team-card-title">Team A🌻</h2>
+                <p class="team-card-score" id="scoreA">0</p>
+                <div class="score-card-button-container">
+                    <span class="score_card_button" onClick="decScoreA()">👎</span>
+                    <span class="score_card_button" onClick="incScoreA()">👍</span>
+                </div>
+            </div>
+                <div class="team-card">
+                <h2 class="team-card-title">Team B🌼</h2>
+                 <p class="team-card-score" id="scoreB">0</p>
+                 <div class="score-card-button-container">
+                    <span class="score_card_button" onClick="decScoreB()">👎</span>
+                    <span class="score_card_button" onClick="incScoreB()">👍</span>
+                </div>
+                </div>
+            
+    </div>
+    <div class="reset-button-container">
+        <button class="btn-reset" onClick="reset()">Reset</button>
+    </div>
+    </body>
+</html>
